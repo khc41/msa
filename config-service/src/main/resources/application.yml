@@ -9,15 +9,15 @@ spring:
     port: 5672
     username: guest
     password: guest
-  profiles:
-    active: native
+#  profiles:
+#    active: native
   cloud:
     config:
       server:
-#        native:
-#          search-locations: file://C:\Users\heechul\Desktop\work\native-file-repo
         git:
           uri: https://github.com/khc41/spring-cloud-config
+          #        native:
+          #          search-locations: file://C:\Users\heechul\Desktop\work\native-file-repo
 #          uri: file://C:\Users\heechul\Desktop\work\git-local-repo
 
 management:
