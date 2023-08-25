@@ -76,13 +76,6 @@ public class OrderController {
             result.add(new ModelMapper().map(v, ResponseOrder.class));
         });
 
-        try {
-            Thread.sleep(1000);
-            throw new Exception("장애 발생");
-        } catch (InterruptedException ex) {
-            log.error(ex.getMessage());
-        }
-
         log.info("After received orders data");
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
