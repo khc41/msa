@@ -30,7 +30,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/health_check/**").permitAll();
-//        http.authorizeRequests().antMatchers("/**")
+        http.authorizeRequests().antMatchers("/**").permitAll();
 //                .hasIpAddress("host.docker.internal") // <- IP 변경
 //                .and()
 //                .addFilter(getAuthenticationFilter());
